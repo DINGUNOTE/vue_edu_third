@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    hello
+    <ToolBar></ToolBar>
+    
+    <!-- router에 설정된 url과 맞는 컴포넌트가 표시 됨 -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-
+import ToolBar from './components/ToolBar.vue';
 export default {
-  methods: {
-    fetchData(){
-      console.log('hello');
-    }
+  components: {
+    ToolBar,
   }
-  
 }
 </script>
 
