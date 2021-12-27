@@ -1,0 +1,27 @@
+# Vue Router를 사용해서 페이지 별 보여지는 컴포넌트 생성
+* src 폴더 하위에 router 폴더 생성 후 index.js 파일을 아래와 같이 생성 
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+
+Vue.use(VueRouter);
+
+export const router = new VueRouter({
+  routes: [
+    {
+      // path: url 주소
+      path: '',
+      // component: url 주소로 갔을 때 표시 될 컴포넌트
+      component: '',
+    },
+    {
+      path: '',
+      component: '',
+    },
+    {
+      path: '',
+      component: '',
+    },
+  ]
+});
+
+* src 폴더 하위에 views 폴더 생성 후 각 페이지 마다 보여질 컴포넌트를 각각 생성
