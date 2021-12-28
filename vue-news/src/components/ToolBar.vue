@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header">
     <router-link to="/news">News</router-link> |
     <router-link to="/ask">Ask</router-link> |
     <router-link to="/jobs">Jobs</router-link>
@@ -12,6 +12,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .header{padding:8px;color:#fff;background-color:#42b883;}
+  .header .router-link-exact-active{color:#35495e;}
+  .header a{color:#fff;}
 </style>
