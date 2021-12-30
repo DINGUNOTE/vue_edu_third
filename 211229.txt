@@ -15,4 +15,4 @@ function fetchNewsList() {
 
 # axios를 사용해서 API 연동 해보기
 
-# 화살표 함수인 경우에는 window가 아니라 코드가 실행되는 시점의 상위 스코프를 참조한다.
+# 화살표 함수인 경우에는 this는 window가 아니라 코드가 실행되는 시점의 상위 스코프를 참조한다.
