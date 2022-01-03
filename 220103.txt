@@ -1,0 +1,10 @@
+# Vuex 설치 및 Vuex 적용된 앱 구조
+* 설치 방법 : npm i vuex
+* 현재 구조
+  API -> NewsView
+* Vuex 적용 구조
+  API -> Vuex -> NewsView
+
+# Vuex의 actions에 선언된 내용에서 state에 바로 접근할 수 없다.
+
+# mutations의 첫번째 인자는 state를 받는다.
