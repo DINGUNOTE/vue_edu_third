@@ -1,7 +1,7 @@
 <template>
   <div>
     <p v-for="item in $store.state.jobs" :key="item.title">
-      <a :href="item.url" target="_blank">{{ item.title }}</a>
+      <a :href="item.url">{{ item.title }}</a>
       <small>{{item.time_ago}}, {{ item.domain }}</small>
     </p>
   </div>
