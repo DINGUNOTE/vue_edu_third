@@ -9,11 +9,10 @@ import ItemView from '../views/ItemView.vue';
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
-  mode: 'history',
+  mode: 'history', // # 해쉬값 제거
   routes: [
     {
-      // 첫 페이지 설정
-      path: '/',
+      path: '/', // 첫 페이지 설정
       redirect: '/news',
     },
     {
@@ -31,7 +30,7 @@ export const router = new VueRouter({
       component: JobsView,
     },
     {
-      path: '/user',
+      path: '/user/:id',
       component: UserView,
     },
     {

@@ -1,6 +1,14 @@
 <template>
   <div>
-    <div v-for="user in $store.state.news" v-bind:key="user.id"> {{ user.title }} </div>
+    <p v-for="item in $store.state.news" v-bind:key="item.title">
+      <a v-bind:href="item.url" target="_blank">{{ item.title }}</a>
+      <small>
+        {{ item.time_ago }} by
+        <router-link v-bind:to="`/user/${item.user}`">
+          {{ item.user }}
+        </router-link>
+      </small>
+    </p>
   </div>
 </template>
 
