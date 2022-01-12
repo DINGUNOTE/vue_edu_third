@@ -31,7 +31,7 @@
 export default {
   created() {
     const name = this.$route.name;
-    console.log(this.$route);
+    // console.log(this.$route);
     if( name === 'news'){
       this.$store.dispatch('FETCH_NEWS');
     } else if(name === 'ask'){
