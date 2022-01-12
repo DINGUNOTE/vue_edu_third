@@ -4,7 +4,9 @@
       <!-- 사용자 정보 -->
       <user-profile :info="fetchedItem">
         <router-link slot="username" :to="`/user/${fetchedItem.user}`">{{ fetchedItem.user }}</router-link>
-        <template slot="time">{{ 'Posted ' + fetchedItem.time_ago }}</template>
+        <template slot="time">
+          <div class="time">{{ 'Posted ' + fetchedItem.time_ago }}</div>
+        </template>
       </user-profile>
       <!-- <div class="user-container">
         <div>
