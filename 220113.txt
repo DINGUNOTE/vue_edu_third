@@ -1,0 +1,33 @@
+# 이벤트 버스를 이용한 스피너 컴포넌트 구현
+* 이벤트 버스 : 빈 이벤트 객체를 만들어서 이 객체를 통해 컴포넌트 간 데이터를 전달하는 것
+
+# import, export 두 가지 사용법
+// 1
+// bus.js
+export const bus = new Vue();
+
+// App.vue
+import {bus} from './bus.js';
+
+// 2
+// bus.js
+export default new Vue();
+
+// App.vue
+import Bus from './bus.js';
+
+# 하이 오더 컴포넌트(HOC)
+* 뷰의 HOC는 리액트의 HOC에서 기원됐다.
+  - https://reactjs.org/docs/higher-order-components.html
+* HOC는 컴포넌트의 로직(코드)를 재사용하기 위한 고급 기술이다.
+* HOC 사용이 많아질수록 컴포넌트 레벨이 깊어져 컴포넌트 통신에 불편함이 생길 수 있다.
+
+# Mixins
+* 여러 컴포넌트 간에 공통으로 사용하고 있는 로직, 기능들을 재사용하는 방법
+var HelloMixins = {
+  // 컴포넌트 옵션 (data, methods, created 등)
+}
+
+new Vue({
+  mixins: [HelloMixins]
+})
