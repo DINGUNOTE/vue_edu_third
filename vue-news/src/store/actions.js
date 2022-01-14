@@ -1,37 +1,37 @@
-import { fetchNewsList, fetchJobsList, fetchAskList, fetchList, fetchUserInfo, fetchCommentItem } from '../api/index.js';
+import { /* fetchNewsList, fetchJobsList, fetchAskList, */ fetchList, fetchUserInfo, fetchCommentItem } from '../api/index.js';
 
 export default {
-  FETCH_NEWS(context) {
-    fetchNewsList()
-      .then(response => {
-        context.commit('SET_NEWS', response.data);
-        // state.news = response.data;
-        return response;
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  },
-  FETCH_JOBS({ commit }) {
-    fetchJobsList()
-      .then(({ data }) => {
-        commit('SET_JOBS', data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  },
-  FETCH_ASK({ commit }) {
-    fetchAskList()
-      .then(({ data }) => {
-        commit('SET_ASK', data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  },
+  // FETCH_NEWS(context) {
+  //   fetchNewsList()
+  //     .then(response => {
+  //       context.commit('SET_NEWS', response.data);
+  //       // state.news = response.data;
+  //       return response;
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // },
+  // FETCH_JOBS({ commit }) {
+  //   fetchJobsList()
+  //     .then(({ data }) => {
+  //       commit('SET_JOBS', data);
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // },
+  // FETCH_ASK({ commit }) {
+  //   fetchAskList()
+  //     .then(({ data }) => {
+  //       commit('SET_ASK', data);
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // },
   FETCH_USER({ commit }, name) {
-    fetchUserInfo(name)
+    return fetchUserInfo(name)
       .then(({ data }) => {
         commit('SET_USER', data);
       })
@@ -40,7 +40,7 @@ export default {
       });
   },
   FETCH_ITEM({ commit }, id) {
-    fetchCommentItem(id)
+    return fetchCommentItem(id)
       .then(({ data }) => {
         commit('SET_ITEM', data);
       })
@@ -49,7 +49,7 @@ export default {
       });
   },
   FETCH_LIST({ commit }, pageName) {
-    fetchList(pageName)
+    return fetchList(pageName)
       .then(({ data }) => {
         commit('SET_LIST', data);
       })
