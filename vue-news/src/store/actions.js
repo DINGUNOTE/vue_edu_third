@@ -48,13 +48,27 @@ export default {
         console.log(error);
       });
   },
-  FETCH_LIST({ commit }, pageName) {
-    return fetchList(pageName)
-      .then(({ data }) => {
-        commit('SET_LIST', data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+
+  // promise
+  // FETCH_LIST({ commit }, pageName) {
+  //   return fetchList(pageName)
+  //     .then(({ data }) => {
+  //       commit('SET_LIST', data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // },
+
+  // async & await
+  async FETCH_LIST({ commit }, pageName) {
+    try {
+      const response = await fetchList(pageName);
+      commit('SET_LIST', response.data);
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+    
   },
 }

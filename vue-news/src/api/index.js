@@ -18,8 +18,8 @@ const config = {
 //   return axios.get(`${config.baseUrl}jobs/1.json`);
 // }
 
-function fetchList(pageName) {
-  return axios.get(`${config.baseUrl}${pageName}/1.json`);
+async function fetchList(pageName) {
+  return await axios.get(`${config.baseUrl}${pageName}/1.json`);
 }
 
 function fetchUserInfo(username) {
