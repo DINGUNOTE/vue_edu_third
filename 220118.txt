@@ -1,0 +1,30 @@
+# Async & Await의 에러 처리 방법
+* try catch 구문을 사용한다.
+async loginUser1() {
+      try { // 성공 시 로직
+        var response = await axios.get('https://jsonplaceholder.typicode.com/users/1');
+        if (response.data.id === 1) {
+          console.log('사용자가 인증되었습니다.');
+          var list = await axios.get('https://jsonplaceholder.typicode.com/todos');
+          this.items = list.data;
+        }
+      } catch (error) { // 실패 시 로직
+        hadnleException(error);
+        console.log(error);
+      }
+    }
+
+
+# 외부 라이브러리 모듈화
+* 이유 : Vue.js 관련 라이브러리가 없을 때 일반 라이브러리를 결합할 수 있어야 한다.
+* 종류 : 차트, 데이트 피커, 테이블, 스피너, ...
+
+
+# 차트 라이브러리 설치 및 차트 그리기
+1. 차트 라이브러리 NPM으로 설치
+2. 설치된 라이브러리를 import로 App.vue에서 로딩
+3. mounted() 라이프 사이클 훅에서 차트를 그림
+4. 차트를 컴포넌트화
+5. 컴포넌트의 플러그인화
+6. 컴포넌트 통신을 이용한 차트 컴포넌트 기능 결합
+
