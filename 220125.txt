@@ -1,1 +1,8 @@
 # 서비스 배포를 위한 명령어 소개 및 실습
+* npm run build 명령어를 통해 호스팅할 수 있는 형태의 html, css, js, 이미지 등 정적인 파일들이 생성된다. 이렇게 생성된 자원을 빌드된 자원이라고 한다.
+
+# Netlify를 이용한 배포 실습
+* https://www.netlify.com/
+
+# Vue CLI 배포 설명 페이지
+* https://cli.vuejs.org/guide/deployment.html#netlify
