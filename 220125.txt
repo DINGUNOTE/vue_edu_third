@@ -10,3 +10,8 @@
 # SPA(Single Page Application) 호스팅 시 서버에 추가해줘야하는 설정
 * 서버에서는 path들의 정보들을 알 수 없기 때문에 웹 서버마다 별도의 설정을 해줘야 한다.
 * ex) Netlify - public/_redirects  /*   /index.html    200
+
+# .env 환경 변수 파일
+# Temp
+변수=값
+APP_TITLE=HELLO
